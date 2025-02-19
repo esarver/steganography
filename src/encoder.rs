@@ -12,7 +12,7 @@ pub struct Encoder<'a> {
 impl<'a> Encoder<'a> {
 	/// Creates a new encoder with a buffer to write and an image to write it to
 	pub fn new(input: &[u8], img: DynamicImage) -> Encoder {
-		let img_as_rgba: ImageBuffer<Rgba<u8>, Vec<u8>> = img.to_rgba();
+		let img_as_rgba: ImageBuffer<Rgba<u8>, Vec<u8>> = img.to_rgba8();
 		Encoder{
 			img: img_as_rgba,
 			input

@@ -44,7 +44,7 @@ pub fn file_as_dynamic_image(filename: String) -> DynamicImage {
 
 pub fn file_as_image_buffer(filename: String) -> ImageBuffer<Rgba<u8>, Vec<u8>> {
     let img = open(&Path::new(&filename)).unwrap();
-    img.to_rgba()
+    img.to_rgba8()
 }
 
 pub fn save_image_buffer(img: ImageBuffer<Rgba<u8>, Vec<u8>>, filename: String) {
